@@ -22,7 +22,6 @@
          (map io/resource filenames)))
 
 (defn create-tokenizer [dix]
-  (Yaito. dix))
+  (fn [text]
+    (into [] (.tokenize (Yaito. dix) text))))
 
-(defn tokenize [tokenizer text]
-  (into [] (.tokenize tokenizer text)))

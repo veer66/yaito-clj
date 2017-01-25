@@ -9,14 +9,12 @@ yaito-clj is a Clojure wrapper for yaito - a word tokenizer for ASEAN languages
 ## Example
 
 ````clojure
-(ns exper1
-  (:require [yaito-clj.core :refer [read-dict-from-bundle
-                                    create-tokenizer
-                                    tokenize]]))
+(ns exper1      
+  (:require [yaito-clj.core :as yaito]))
 
-(let [tokenizer (-> "tdict-std.txt"
-                    read-dict-from-bundle
-                    create-tokenizer)]
-  (tokenize tokenizer "กากา"))
+(let [tokenize (-> "tdict-std.txt"
+                   yaito/read-dict-from-bundle
+                   yaito/create-tokenizer)]
+   (tokenize "กากา"))
 ````
 
