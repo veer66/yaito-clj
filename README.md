@@ -2,6 +2,10 @@
 
 yaito-clj is a Clojure wrapper for yaito - a word tokenizer for ASEAN languages
 
+## Install
+
+[![Clojars Project](https://img.shields.io/clojars/v/yaito-clj.svg)](https://clojars.org/yaito-clj)
+
 ## Example
 
 ````clojure
